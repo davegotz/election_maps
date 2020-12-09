@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Election 2020</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="ElectionMapBars.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+    <link rel="stylesheet" href="tips.css">
+</head>
+<body>
+<center>
+<h1>Election 2020</h1>
+    <div style="width: 900px; text-align: left;">
+        Each bar below is sized to represent the number of votes received by Joe Biden (blue) or Donald Trump (red) in the
+        2020 election. Each state is tinted red or blue based on the percentage of margin of victory in the state.
+        States that are nearly tied appear as white. States that were overwhelmingly won by one candidate or the other will
+        appear slightly blue (for Joe Biden) or red (for Donald Trump).  The data is pulled live from the <a href="https://cookpolitical.com/2020-national-popular-vote-tracker/">Cook Political Report's 2020 Popular Vote Tracker</a>.
+        <p/>
+        <button onclick="set_mode('total')">Vote Totals</button>
+        <button onclick="set_mode('margin')">Vote Margin</button>
+    </div>
+<svg id="usmap" width="900" height="600" style="border: 1px solid white;"></svg>
+    <br/>
+    This map was developed by <a href="/gotz">David Gotz</a> at the <a href="/">UNC VACLab</a>. It is a 2020 update to
+    the map discussed in <a href="http://gotz.web.unc.edu/2016/12/20/election-maps-representing-area-and-population/">this
+    2016 blog post</a> about the misleading nature of some types of election maps.
+    <br/>
+    <a href="/"><img style="width:250px;" src="vaclab_logo.svg"></a>
+    <p/>
+</center>
+</body>
+</html>
